@@ -4,10 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * 
- */
-class Post extends BaseModel
+class Ecs_site_visitor extends BaseModel
 {
-	protected $fillable = [];
 }

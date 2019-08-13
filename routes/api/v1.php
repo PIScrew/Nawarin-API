@@ -38,6 +38,31 @@ $api->version('v1', [
         'as' => 'authorizations.update',
         'uses' => 'AuthController@update',
     ]);
+    //PRODUCTS
+        //product list
+        $api->get('product', [
+            'as' => 'product.index',
+            'uses' => 'ProductController@index',
+        ]);
+        //product list by id
+        $api->get('product/{id}', [
+            'as' => 'product.show',
+            'uses' => 'ProductController@productShow',
+        ]);
+
+       //CATEGORI
+        //categori list
+        $api->get('category', [
+            'as' => 'category.index',
+            'uses' => 'CategoryController@index',
+        ]);
+        // show categori by id
+        $api->get('category/{id}', [
+            'as' => 'category.show',
+            'uses' => 'CategoryController@categoriShow',
+        ]);
+
+        
 
     // need authentication
     $api->group(['middleware' => 'api.auth'], function ($api) {
@@ -133,31 +158,6 @@ $api->version('v1', [
             'as' => 'posts.destroy',
             'uses' => 'PostController@destroy',
         ]);
-
-        //CATEGORI
-        //categori list
-        $api->get('categori', [
-            'as' => 'categori.index',
-            'uses' => 'CategoriController@index',
-        ]);
-        // show categori by id
-        $api->post('categori/{id}', [
-            'as' => 'categori.show',
-            'uses' => 'CategoriController@show',
-        ]);
-
-        //PRODUCTS
-        //product list
-        $api->post('product', [
-            'as' => 'product.index',
-            'uses' => 'ProductController@index',
-        ]);
-        //product list by id
-        $api->get('product{id}', [
-            'as' => 'product.show',
-            'uses' => 'ProductController@productShow',
-        ]);
-
         
     });
 });

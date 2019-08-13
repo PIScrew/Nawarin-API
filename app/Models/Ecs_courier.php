@@ -4,10 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * 
- */
-class Post extends BaseModel
+class Ecs_courier extends Model
 {
-	protected $fillable = [];
+    //
 }

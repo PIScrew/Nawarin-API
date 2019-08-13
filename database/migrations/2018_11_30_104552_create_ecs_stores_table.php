@@ -25,7 +25,7 @@ class CreateEcsStoresTable extends Migration
             $table->longText('courier')->nullable();
             $table->timestamp('last_login')->nullable();
             $table->integer('is_login')->default(0);
-            $table->timestamp('is_ban')->default(0);
+            // $table->timestamp('is_ban')->default(0);
             $table->integer('integration')->default(0);
             $table->integer('reseller')->default(0);
             $table->integer('status')->default(0);
