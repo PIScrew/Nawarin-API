@@ -215,4 +215,4 @@ class AuthController extends BaseController
         return $this->response->item($authorization, new AuthorizationTransformer())
             ->setStatusCode(201);
     }
-}
+} 

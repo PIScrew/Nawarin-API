@@ -3,6 +3,7 @@
 namespace App\Transformers;
 
 use App\Models\Ecs_product;
+use App\Models\Ecs_product_img;
 use League\Fractal\TransformerAbstract;
 
 class ProductTransformer extends TransformerAbstract
@@ -14,7 +15,7 @@ class ProductTransformer extends TransformerAbstract
 
         $formattedUser = [
             'id'                    => $product->id,
-            'nama_product'                  => $product->title_product,
+            'nama_product'          => $product->title_product,
         ];
         return $formattedUser;
     }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * 
  */
-class Post extends BaseModel
+class Ecs_user_role extends BaseModel
 {
 	protected $fillable = [];
 }

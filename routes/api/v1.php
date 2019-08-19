@@ -44,11 +44,19 @@ $api->version('v1', [
             'as' => 'product.index',
             'uses' => 'ProductController@index',
         ]);
+        
         //product list by id
         $api->get('product/{id}', [
             'as' => 'product.show',
             'uses' => 'ProductController@productShow',
         ]);
+
+        //product comment
+        $api->post('product', [
+            'as' => 'product.comment',
+            'uses' => 'ProductController@productComment',
+        ]);
+
 
        //CATEGORI
         //categori list
@@ -60,6 +68,52 @@ $api->version('v1', [
         $api->get('category/{id}', [
             'as' => 'category.show',
             'uses' => 'CategoryController@categoriShow',
+        ]);
+
+        //WISHLIST
+        //show wishlist
+        $api->get('wishlist', [
+            'as' => 'wishlist.index',
+            'uses' => 'WishlistController@index',
+        ]);
+        // wishlist by id
+        $api->get('wishlist/{id}', [
+            'as' => 'wishlist.show',
+            'uses' => 'WishlistController@wishlistShow',
+        ]);
+        // destroy wishlist by id
+        $api->delete('wishlist/{id}', [
+            'as' => 'wishlist.destroy',
+            'uses' => 'WishlistController@wishlistDestroy',
+        ]);
+        // adding wishlist
+        $api->post('wishlist', [
+            'as' => 'wishlist.store',
+            'uses' => 'WishlistController@wishlistAdd',
+        ]);
+
+        // show list comment
+        $api->get('comment', [
+            'as' => 'comment.index',
+            'uses' => 'ProductController@listComment',
+        ]);
+        
+         // adding comment
+         $api->post('comment/add', [
+            'as' => 'comment.store',
+            'uses' => 'ProductController@storeComment',
+        ]);
+
+        // updating comment
+        $api->put('comment/update/{id}', [
+            'as' => 'comment.update',
+            'uses' => 'ProductController@updateComment',
+        ]);
+
+        // deleting comment
+        $api->delete('comment/delete/{id}', [
+            'as' => 'comment.destroy',
+            'uses' => 'ProductController@deleteComment',
         ]);
 
         

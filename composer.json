@@ -16,8 +16,9 @@
         "dingo/api": "1.0.x@dev",
         "vluzrmos/lumen-cors": "2.1.*",
         "flipbox/lumen-generator": "^5.6",
-        "cviebrock/eloquent-sluggable": "^4.3",
-        "steevenz/rajaongkir": "^2.2"
+        "cviebrock/eloquent-sluggable": "4.3",
+        "steevenz/rajaongkir": "^2.2",
+        "laravelista/lumen-vendor-publish": "^2.1"
 
     },
     "require-dev": {
