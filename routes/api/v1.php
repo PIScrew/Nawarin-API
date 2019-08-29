@@ -51,6 +51,13 @@ $api->version('v1', [
             'uses' => 'ProductController@productShow',
         ]);
 
+        //product add
+        $api->post('product/add', [
+            'as' => 'product.store',
+            'uses' => 'ProductController@storeProduct',
+        ]);
+
+
         //product comment
         $api->post('product', [
             'as' => 'product.comment',

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Ecs_product extends BaseModel
 {   
     use SoftDeletes;
-    use Sluggable;
+    use Sluggable;    
     public function sluggable()
     {
         return [
